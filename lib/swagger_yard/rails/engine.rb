@@ -11,8 +11,8 @@ module SwaggerYard
 
       initializer "swagger_yard-rails.paths" do |app|
         SwaggerYard.configure do |config|
-          config.controller_path ||= ::Rails.root + 'app/controllers/**/*'
-          config.model_path      ||= ::Rails.root + 'app/models/**/*'
+          config.controller_path ||= ::Rails.root/'app/controllers/**/*'
+          config.model_path      ||= ::Rails.root/'app/models/**/*'
 
           config.path_discovery_function = RouteInspector.discovery_function
         end
